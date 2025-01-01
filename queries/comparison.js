@@ -17,5 +17,13 @@ interests:{$in: ["Cooking"]}
 db.test.find({gender:"Female",
 age:{$gte:18,$lte:30 },
 interests:{$in: ["Cooking","Reading"]}
+
     
 },{age:1,interests:1})
+
+
+
+// extra
+db.test.find({gender:"Male",
+age:{$gte:18,$lte:30 },
+interests:{$in: ["Cooking"]})
