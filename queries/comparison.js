@@ -24,6 +24,3 @@ interests:{$in: ["Cooking","Reading"]}
 
 
 // extra
-db.test.find({gender:"Male",
-age:{$gte:18,$lte:30 },
-interests:{$in: ["Cooking"]})
