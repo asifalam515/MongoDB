@@ -1,4 +1,4 @@
-Array Query Operator::
+// Array Query Operator::
 { <field>: { $all: [ <value1> , <value2> ... ] } }
 db.test.find({interests:{$all:["Travelling","Reading"]}})
 
