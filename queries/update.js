@@ -25,3 +25,7 @@ db.test.updateOne({
 db.test.updateOne({ _id: ObjectId("6406ad63fc13ae5a40000066") }
 , { $unset: { birthday: "" } }
 , { $set: {} })
+//Pop: will remove  the last element
+db.test.updateOne({ _id: ObjectId("6406ad63fc13ae5a40000066") }
+    , { $pop: { friends: 1 } }
+    , { $set: {} })
