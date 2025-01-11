@@ -17,4 +17,39 @@ const studentSchema = new Schema<Student>({
       require: true,
     },
   },
+  gender: ['Male', 'Female'],
+  dateOfBirth: {
+    type: String,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  contactNo: {
+    type: String,
+    required: true,
+  },
+  emergencyContactNo: {
+    type: String,
+  },
+  bloodGroup: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'],
+  presentAddress: { type: String, required: true },
+  pernamentAddress: { type: String, required: true },
+  gurdian: {
+    fatherName: String,
+    fatherOccupation: String,
+    fatherContactNo: String,
+    motherName: String,
+    motherOccupation: String,
+    motherContactNo: String,
+  },
+  localGurdian: {
+    name: String,
+    occupation: String,
+    contactNo: String,
+    address: String,
+  },
+
+  profileImg: String,
+  isActive: ['ACTIVE', 'BLOCKED'],
 })

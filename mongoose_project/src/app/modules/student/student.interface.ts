@@ -32,5 +32,5 @@ export type Student = {
   gurdian: Guardian
   localGurdian: localGurdian
   profileImg?: string
-  isActive: 'ACTIVE' | 'INACTIVE'
+  isActive: 'ACTIVE' | 'BLOCKED'
 }
