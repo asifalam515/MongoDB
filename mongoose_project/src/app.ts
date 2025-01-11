@@ -4,10 +4,11 @@ const app: Application = express()
 //parse
 app.use(express.json())
 app.use(cors())
-app.get('/', (req: Request, res: Response) => {
-  var a = 10
-
+const getAController = (req: Request, res: Response) => {
+  const a = 1000
   res.send(a)
-})
+}
+
+app.get('/', getAController)
 console.log(process.cwd())
 export default app
