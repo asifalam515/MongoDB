@@ -1,4 +1,8 @@
-import { Schema, model, connect } from 'mongoose'
+export type UserName = {
+  firstName: string
+  middleName: string
+  lastName: string
+}
 export type Guardian = {
   fatherName: string
   fatherOccupation: string
@@ -7,13 +11,16 @@ export type Guardian = {
   motherOccupation: string
   motherContactNo: string
 }
+
+export type localGurdian = {
+  name: string
+  occupation: string
+  contactNo: string
+  address: string
+}
 export type Student = {
   id: string
-  name: {
-    firstName: string
-    middleName: string
-    lastName: string
-  }
+  name: UserName
   gender: 'Male' | 'Female'
   dateOfBirth: string
   email: string
@@ -23,4 +30,7 @@ export type Student = {
   presentAddress: string
   pernamentAddress: string
   gurdian: Guardian
+  localGurdian: localGurdian
+  profileImg?: string
+  isActive: 'ACTIVE' | 'INACTIVE'
 }
